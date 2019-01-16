@@ -30,4 +30,8 @@ def end_other(a, b):
   long_s, short_s = (a,b) if len(a) >= len(b) else (b,a)
   return long_s.lower().endswith(short_s.lower())
 
-#
+# end_other
+def end_other(a, b):
+  a = a.lower()
+  b = b.lower()
+  return (b.endswith(a) or a.endswith(b))
